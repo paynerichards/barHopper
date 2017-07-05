@@ -7,7 +7,11 @@ var express = require('express'),
 
 var UserController = require('./controllers/UserController');
 
-app.use('/user', UserController)
+app.use('/user', UserController);
+
+app.get('/', function(request, response){
+	response.render('login')
+})
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');

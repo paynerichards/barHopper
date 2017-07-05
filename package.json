@@ -9,11 +9,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^1.0.2",
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
+    "express-session": "^1.15.3",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.2",
     "gulp-watch": "^4.3.11",
+    "hbs": "^4.0.1",
     "mongoose": "^4.11.0"
   }
 }

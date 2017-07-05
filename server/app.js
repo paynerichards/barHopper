@@ -13,6 +13,8 @@ app.use(session({
 	cookie: {secure: false}
 }));
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 var UserController = require('./controllers/UserController');
 var BarController = require('./controllers/BarController');
 

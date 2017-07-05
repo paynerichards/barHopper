@@ -30,18 +30,21 @@ router.post('/login', function(request, response){
 	})
 })
 
-//POST request to /users/register
+//POST request to /user/register
 router.post('/register', function(request, response){
 	//create new user
 	bcrypt.hash(request.body.password, 10, function(error, hash){
 		var user = new User({
 			email: request.body.email,
 			password: hash,
-			username: request.body.username
+			username: request.body.username,
+			dob: request.body.dob,
+			hometown: request.body.hometown
 		})
+		console.log(user)
 		user.save();
 		request.session.loggedIn = true;
-		response.redirect('/bar/search')
+		response.render('search')
 	})
 
 })

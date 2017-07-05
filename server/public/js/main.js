@@ -15,4 +15,23 @@ $('#registerSubmit').click(function(){
 			window.location = "http://localhost:3000/bar/search";
 		}
 	})
+});
+
+$('#loginSubmit').click(function(){
+	var userInfo = {
+		username: $('#loginUser').val(),
+		password: $('#loginPass').val()
+	}
+	$.ajax({
+		method: 'POST',
+		url: 'http://localhost:3000/user/login',
+		data: userInfo,
+		success: function(response){
+			window.location = "http://localhost:3000/bar/search"
+		}
+	})
 })
+
+// $('#searchSubmit').click(function(){
+	
+// })

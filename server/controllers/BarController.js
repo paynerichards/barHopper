@@ -8,11 +8,11 @@ router.use(bodyParser.urlencoded({extended: true}));
 
 //GET request to /bar/search
 router.get('/search', function(request, response){
-	// if(request.session.loggedIn === true){
+	if(request.session.loggedIn === true){
 		response.render('search')
-	// }else{
-		// response.redirect('/')
-	// }
+	}else{
+		response.redirect('/')
+	}
 })
 
 //POST request to /bar/search

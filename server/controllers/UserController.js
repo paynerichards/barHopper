@@ -14,7 +14,8 @@ router.get('/register', function(request, response){
 //POST request to /user/login
 router.post('/login', function(request, response){
 	//check for existing user, log in
-	User.findOne({email: request.body.email}, function(error, user){
+	User.findOne({username: request.body.username}, function(error, user){
+		console.log(user)
 		if(user){
 			bcrypt.compare(request.body.password, user.password, function(error, match){
 				if(match === true){
@@ -44,14 +45,14 @@ router.post('/register', function(request, response){
 		console.log(user)
 		user.save();
 		request.session.loggedIn = true;
-		response.render('search')
+		response.json('success')
 	})
 
 })
 
 //GET request to user/logout
 router.get('/logout', function(request, response){
-	request.session.loggedIn = false
+	request.session.loggedIn = false;
 	response.redirect('/')
 })
 

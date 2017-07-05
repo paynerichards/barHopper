@@ -15,4 +15,15 @@ router.get('/search', function(request, response){
 	}
 })
 
+//GET request to /bar/assignment
+router.get('/:id', function(request, response){
+	if(request.session.loggedIn === true){
+		// var bar = 
+
+		response.render('assignment')
+	}else{
+		response.redirect('/')
+	}
+})
+
 module.exports= router;

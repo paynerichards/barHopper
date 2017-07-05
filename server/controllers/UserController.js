@@ -43,4 +43,30 @@ router.post('/register', function(request, response){
 
 })
 
+//GET request to user/logout
+router.get('/logout', function(request, response){
+	request.session.loggedIn = false
+	response.redirect('/')
+})
+
+
 module.exports= router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

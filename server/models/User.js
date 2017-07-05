@@ -8,6 +8,8 @@ var UserSchema = new mongoose.Schema({
 		coordinates: [Number]
 	},
 	username: String,
+	dob: String,
+	hometown: String,
 	priors: [{type: mongoose.Schema.Types.ObjectId, ref: 'Bar'}]
 })
 

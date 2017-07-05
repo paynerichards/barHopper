@@ -6,7 +6,10 @@ var express = require('express'),
 
 router.use(bodyParser.urlencoded({extended: true}));
 
-
+//GET request to /user/register
+router.get('/register', function(request, response){
+	response.render('register')
+})
 
 //POST request to /user/login
 router.post('/login', function(request, response){

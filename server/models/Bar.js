@@ -7,3 +7,7 @@ var BarSchema = new mongoose.Schema({
 		coordinates: [Number]
 	}
 })
+
+var barModel = mongoose.model('Bar', BarSchema);
+
+module.exports = barModel

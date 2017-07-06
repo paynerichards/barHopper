@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./server/app.js"
-
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +14,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.3",
     "express-session": "^1.15.3",
+    "express-sessions": "^1.0.6",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.2",
     "gulp-watch": "^4.3.11",

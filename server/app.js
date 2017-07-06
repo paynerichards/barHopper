@@ -24,11 +24,7 @@ app.use('/bar', BarController);
 
 //GET request to / 
 app.get('/', function(request, response){
-	// if(request.session.loggedIn === false){
-		response.render('login')
-// 	}else{
-// 		response.redirect('bar/search')
-// 	}
+	response.render('login')
 });
 
 

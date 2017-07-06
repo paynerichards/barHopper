@@ -2,14 +2,20 @@ var express = require('express'),
 	router = express.Router(),
 	Bar = require('../models/Bar')
 	User = require('../models/User'),
-	bodyParser = require('body-parser');
+	bodyParser = require('body-parser')
+	axios = require('axios');
+
+require('dotenv').config()
+
+
 
 router.use(bodyParser.urlencoded({extended: true}));
 
 //GET request to /bar/search
 router.get('/search', function(request, response){
 	if(request.session.loggedIn === true){
-		response.render('search')
+		var loggedIn = {loggedIn: true}
+		response.render('search', loggedIn)
 	}else{
 		response.redirect('/')
 	}
@@ -17,13 +23,24 @@ router.get('/search', function(request, response){
 
 //POST request to /bar/search
 router.post('/search', function(request, response){
-	var bar = new Bar({
-			name: request.body.name,
-			yelpId: request.body.yelpId,
-			location: request.body.location
-		})
-	bar.save();
-	response.redirect('/bar/assignment')
+
+	axios.get("https://api.yelp.com/v3/businesses/search?location=60119", {headers: {'Authorization': 'Bearer ' + process.env.TOKEN}} )
+	.then(function(response){
+		console.log(response)
+	})
+
+
+
+
+
+
+	// var bar = new Bar({
+	// 		name: request.body.name,
+	// 		yelpId: request.body.yelpId,
+	// 		location: request.body.location
+	// 	})
+	// bar.save();
+	// response.redirect('/bar/assignment')
 })
 
 //GET request to /bar/assignment

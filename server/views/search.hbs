@@ -1,18 +1,13 @@
-
-<div class="container">
-  <div class = "main">
-    <div class= "leftDiv">
-    </div>
-    <div class = "mainDiv">
-      <div class = "map">
-      </div>
-      <div class = "searchParameters">
-        <p> location: {{user.location}}</p>
-        <p> search radius: 1 mile </p>
-        <button id="searchSubmit">Submit</button>
-      </div>
-    </div>
-    <div class = "rightDiv">
-    </div>
+<div class = "display">
+  {{user loc map}}
+</div>
+  <div class = "info">
+    <p class = "searchTag">Search Area (miles):</p>
+    <select class = "searchRadius">
+      <option value="value1">1</option>
+      <option value="value2" selected>5</option>
+      <option value="value3">10</option>
+    </select>
+    <button class = "button" id = "Search">Search</button>
   </div>
 </div>

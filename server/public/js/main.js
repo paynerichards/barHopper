@@ -33,17 +33,9 @@ $('#loginSubmit').click(function(){
 })
 
 $('#searchSubmit').click(function(){
-
-	//get user location
-	//Yelp API request - catagory, user loc, key, secret
-	//pull results to array
-	//random number 0 to 39
-	//random selection from the array
-	//post to /bar/search with ajax
-
-	// $.ajax({
-	// 	method: 'POST',
-	// 	url: 'http://localhost:3000/bar/search',
-	// 	data:
-	// })
+	$.ajax({
+		method: 'POST',
+		url: 'http://localhost:3000/bar/search',
+		data: userLoc
+	})
 })

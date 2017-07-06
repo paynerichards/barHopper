@@ -6,19 +6,62 @@ body {
   background-color: @darkColor;
 }
 
-.container{
-	display: flex;
-	flex-flow: column nowrap;
-	justify-content:center;
+.container {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
 }
 
-.main {
-	display: flex;
-	flex-flow: row nowrap;
-	justify-content:center;
+.wordLogo {
+  flex: 0 1 auto;
+  align-self: center;
+  min-width: 600px;
+  margin: 100px 0;
+}
+
+.largeLogo {
+  min-width: 600px;
+}
+
+.display {
+  flex: 0 1 auto;
+  align-self: center;
+  min-width: 600px;
   height: 600px;
 }
 
-img {
-  width: 400px;
+.info {
+  flex: 0 1 auto;
+  align-self: center;
+  min-width: 600px;
+  margin: 0 0 100px 0;
+}
+
+.footer {
+  flex: 0 1 auto;
+  align-self: center;
+  min-width: 600px;
+}
+
+.username {
+  margin: 0 0 0 100px;
+}
+
+.searchTag {
+  float: left;
+  color: white;
+  width: 150px;
+  margin: 0 0 0 175px;
+}
+
+.searchRadius {
+  width: 50px;
+  margin:
+}
+
+.button {
+  width: 50px;
 }

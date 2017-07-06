@@ -32,11 +32,28 @@ $('#loginSubmit').click(function(){
 	})
 })
 
-$('#searchSubmit').click(function(){
-	
-	// $.ajax({
-	// 	method: 'POST',
-	// 	url: 'http://localhost:3000/bar/search',
-	// 	data:
-	// })
+var userLoc = {
+	lat: 0.00000000,
+	long: 0.00000000
+};
+
+navigator.geolocation.getCurrentPosition(function(position) {
+	userLoc.lat = position.coords.latitude;
+	userLoc.long = position.coords.longitude
 })
+
+$('#searchSubmit').click(function(){
+	$.ajax({
+		method: 'POST',
+		url: 'http://localhost:3000/bar/search',
+		data: userLoc
+	})
+})
+
+
+
+
+
+
+
+

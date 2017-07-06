@@ -21,10 +21,10 @@ router.get('/search', function(request, response){
 	}
 })
 
-//POST request to /bar/search
+// POST request to /bar/search
 router.post('/search', function(request, response){
 
-	axios.get("https://api.yelp.com/v3/businesses/search?location=60119", {headers: {'Authorization': 'Bearer ' + process.env.TOKEN}} )
+	axios.get("https://api.yelp.com/v3/businesses/search?term=bars&radius=500&limit=40&open_now=true&latitude=" + request.body.lat + "&longitude=" + request.body.long, {headers: {'Authorization': 'Bearer ' + process.env.TOKEN}} )
 	.then(function(response){
 		console.log(response)
 	})

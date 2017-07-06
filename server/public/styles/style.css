@@ -3,15 +3,49 @@ body {
 }
 .container {
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
+  flex-wrap: nowrap;
   justify-content: center;
+  align-content: stretch;
+  align-items: center;
 }
-.main {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: center;
+.wordLogo {
+  flex: 0 1 auto;
+  align-self: center;
+  min-width: 600px;
+  margin: 100px 0;
+}
+.largeLogo {
+  align-self: center;
+}
+.display,
+.searchMap,
+.assignmentMap {
+  flex: 0 1 auto;
+  align-self: center;
+  min-width: 600px;
   height: 600px;
 }
-img {
-  width: 400px;
+.footer {
+  flex: 0 1 auto;
+  align-self: center;
+  min-width: 600px;
+}
+.username {
+  margin: 0 0 0 100px;
+}
+.searchTag {
+  float: left;
+  color: white;
+  width: 150px;
+  margin: 0 0 0 175px;
+}
+.searchRadius {
+  width: 50px;
+}
+.button {
+  width: 50px;
+}
+ul {
+  list-style-type: none;
 }

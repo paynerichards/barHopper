@@ -21,7 +21,9 @@ body {
 .display,
 .searchMap,
 .assignmentMap {
+  display: flex;
   flex: 0 1 auto;
+  justify-content: center;
   align-self: center;
   min-width: 600px;
   height: 600px;

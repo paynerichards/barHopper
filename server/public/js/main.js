@@ -32,6 +32,16 @@ $('#loginSubmit').click(function(){
 	})
 })
 
+var userLoc = {
+	lat: 0.00000000,
+	long: 0.00000000
+};
+
+navigator.geolocation.getCurrentPosition(function(position) {
+	userLoc.lat = position.coords.latitude;
+	userLoc.long = position.coords.longitude
+})
+
 $('#searchSubmit').click(function(){
 	$.ajax({
 		method: 'POST',

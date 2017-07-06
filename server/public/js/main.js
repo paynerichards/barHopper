@@ -33,9 +33,10 @@ $('#loginSubmit').click(function(){
 })
 
 $('#searchSubmit').click(function(){
-	$.ajax({
-		method: 'POST',
-		url: 'http://localhost:3000/bar/search',
-		data:
-	})
+	
+	// $.ajax({
+	// 	method: 'POST',
+	// 	url: 'http://localhost:3000/bar/search',
+	// 	data:
+	// })
 })

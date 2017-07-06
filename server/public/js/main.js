@@ -49,11 +49,3 @@ $('#searchSubmit').click(function(){
 		data: userLoc
 	})
 })
-
-
-
-
-
-
-
-

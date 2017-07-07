@@ -50,7 +50,7 @@ button:hover {
   justify-content: center;
   align-self: center;
   min-width: 600px;
-  height: 400px;
+  height: 600px;
 }
 .logIn,
 .register {
@@ -85,8 +85,9 @@ input {
   flex: 0 1 auto;
   justify-content: center;
   align-self: center;
-  min-width: 600px;
-  height: 400px;
+  width: 600px;
+  height: 600px;
+  border: 1px solid white;
 }
 .search {
   display: flex;
@@ -98,18 +99,28 @@ input {
 }
 .barInfo {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
 }
 #photo {
-  display: flex;
-  flex: 0 1 auto;
-  justify-content: center;
-  align-self: center;
-  max-width: 600px;
-  max-height: 400px;
+  max-width: 280px;
+  max-height: 280px;
+  margin: 0 25px;
+}
+.barDetails {
+  font: sans;
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+}
+.barDetails p {
+  margin: 0;
+  padding: 0;
+}
+.barName {
+  font-size: 35px;
+  margin: 15px 0;
 }
 #checkIn {
   display: flex;

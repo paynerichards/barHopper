@@ -42,6 +42,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 	loc.userLat = position.coords.latitude;
 	loc.userLong = position.coords.longitude
 	console.log(loc)
+	initMap()
 })
 
 $('#searchSubmit').click(function(){
@@ -50,7 +51,8 @@ $('#searchSubmit').click(function(){
 		url: 'http://localhost:3000/bar/search',
 		data: loc,
 		success: function(response){
-			window.location = "http://localhost:3000/bar/assignment"
+			console.log(response)
+			// window.location = "http://localhost:3000/bar/assignment"
 		}
 	})
 })
@@ -65,7 +67,7 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById('searchMap'), {
     center: {lat: loc.userLat, lng: loc.userLong},
-    zoom: 1
+    zoom: 15
 
   });
 	console.log("searchMap ran");

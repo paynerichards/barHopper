@@ -24,9 +24,10 @@ router.get('/search', function(request, response){
 
 // POST request to /bar/search
 router.post('/search', function(request, response){
-	axios.get("https://api.yelp.com/v3/businesses/search?term=bars&radius=" + request.body.radius + "&limit=40&open_now=true&latitude=" + request.body.lat + "&longitude=" + request.body.long, {headers: {'Authorization': 'Bearer ' + process.env.TOKEN}} )
-	.then(function(response){
-		var randBar = response.data.businesses[random()];
+
+	axios.get("https://api.yelp.com/v3/businesses/search?term=bars&radius=" + request.body.radius + "&limit=40&open_now=true&latitude=" + request.body.userLat + "&longitude=" + request.body.userLong, {headers: {'Authorization': 'Bearer ' + process.env.TOKEN}} )
+	.then(function(res){
+		var randBar = res.data.businesses[random()];
 		console.log(randBar);
 		var bar = new Bar({
 			name: randBar.name,
@@ -38,9 +39,13 @@ router.post('/search', function(request, response){
 			imageUrl: randBar.image_url
 		})
 		bar.save();
+		response.send(bar)
+		
+
 	})
-	.catch()
 	
+	
+
 })
 
 //GET request to /bar/assignment

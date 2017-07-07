@@ -8,7 +8,8 @@ var BarSchema = new mongoose.Schema({
 		coordinates: [Number]
 	},
 	imageUrl: String,
-	address: String
+	address: String,
+	phone: String
 })
 
 var barModel = mongoose.model('Bar', BarSchema);

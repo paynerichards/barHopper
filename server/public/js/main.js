@@ -56,7 +56,7 @@ $('#searchSubmit').click(function(){
 			barLoc.lat = response.location.coordinates[1];
 			barLoc.long = response.location.coordinates[0];
 			barLoc.address = response.address;
-			window.location = "http://localhost:3000/bar/assignment"
+			window.location = "http://localhost:3000/bar/assignment/:" + response._id
 		}
 	})
 })

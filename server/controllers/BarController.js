@@ -37,7 +37,8 @@ router.post('/search', function(request, response){
 				coordinates: [randBar.coordinates.longitude, randBar.coordinates.latitude]
 			},
 			imageUrl: randBar.image_url,
-			address: randBar.location.display_address
+			address: randBar.location.display_address,
+			phone: randBar.display_phone
 		})
 		bar.save();
 		response.send(bar)
@@ -49,9 +50,27 @@ router.post('/search', function(request, response){
 
 })
 
-//GET request to /bar/assignment
-router.get('/assignment', function(request, response){
-		response.render('assignment')
+//GET request to /bar/assignment/:id
+router.get('/assignment/:id', function(request, response){
+	var id = request.params.id;
+	Bar.findById(id, function(error, bar){	
+		response.render('assignment', bar)
+	})
 })
 
 module.exports= router;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

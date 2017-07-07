@@ -13,28 +13,35 @@ body {
   flex: 0 1 auto;
   align-self: center;
   min-width: 600px;
-  margin: 100px 0;
+  margin: 100px 0 0 0;
 }
 .largeLogo {
   align-self: center;
 }
 .display,
-.searchMap,
-.assignmentMap {
+.map {
   display: flex;
   flex: 0 1 auto;
   justify-content: center;
   align-self: center;
   min-width: 600px;
-  height: 50%;
+  height: 400%;
 }
 .footer {
   flex: 0 1 auto;
   align-self: center;
   min-width: 600px;
 }
+.assignment,
+.search {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
+}
 .searchTag {
-  float: left;
   color: white;
   width: 150px;
   margin: 0 0 0 175px;
@@ -91,6 +98,12 @@ input {
   justify-content: center;
   width: 200px;
   height: 30px;
+  margin: 0;
+  padding: 0;
+}
+.map {
+  width: 600px;
+  height: 400px;
   margin: 0;
   padding: 0;
 }

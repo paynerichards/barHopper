@@ -6,7 +6,8 @@ var BarSchema = new mongoose.Schema({
 	location: {
 		type: { type: String },
 		coordinates: [Number]
-	}
+	},
+	imageUrl: String
 })
 
 var barModel = mongoose.model('Bar', BarSchema);

@@ -46,7 +46,7 @@ body {
   width: 150px;
   margin: 0 0 0 175px;
 }
-.searchRadius {
+#searchRadius {
   width: 50px;
 }
 button {

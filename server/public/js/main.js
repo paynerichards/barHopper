@@ -32,20 +32,24 @@ $('#loginSubmit').click(function(){
 	})
 })
 
-var userLoc = {
-	lat: 0.00000000,
-	long: 0.00000000
+var loc = {
+	userLat: 0.00000000,
+	userLong: 0.00000000,
+	radius: ($('#searchRadius option:selected').val() * 1609)
 };
 
 navigator.geolocation.getCurrentPosition(function(position) {
-	userLoc.lat = position.coords.latitude;
-	userLoc.long = position.coords.longitude
+	loc.lat = position.coords.latitude;
+	loc.long = position.coords.longitude
 })
 
 $('#searchSubmit').click(function(){
 	$.ajax({
 		method: 'POST',
 		url: 'http://localhost:3000/bar/search',
-		data: userLoc
+		data: loc
+		// success: function(response){
+		// 	window.location = "http://localhost:3000/bar/assignment"
+		// }
 	})
 })

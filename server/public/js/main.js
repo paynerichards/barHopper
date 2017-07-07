@@ -52,15 +52,15 @@ $('#searchSubmit').click(function(){
 		data: loc,
 		success: function(response){
 			console.log(response)
-			// window.location = "http://localhost:3000/bar/assignment"
+			barLoc.lat = response.location.coordinates[1];
+			barLoc.long = response.location.coordinates[0];
+			barLoc.address = response.address;
+			window.location = "http://localhost:3000/bar/assignment"
 		}
 	})
 })
 
 //add map to search and assignment pages
-//var googleAPI = AIzaSyDbLMFY9LdQ2oJpTurRecyrqU4GiPmZ3bY;
-
-
 
 //map on search page
 function initMap() {
@@ -73,10 +73,11 @@ function initMap() {
 	console.log("searchMap ran");
 }
 
-// var barLoc = {
-// 	lat: 0.00000000,
-// 	long: 0.00000000
-// };
+var barLoc = {
+	lat: 0.00000000,
+	long: 0.00000000,
+	address:"",
+};
 
 // function initAssignmentMap() {
 //   map = new google.maps.Map(document.getElementById('assignmentMap'), {

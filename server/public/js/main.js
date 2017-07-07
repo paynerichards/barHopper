@@ -59,8 +59,8 @@ $('#searchSubmit').click(function(){
 function initMap() {
   map = new google.maps.Map(document.getElementById('searchMap'), {
     center: {lat: userLoc.lat, lng: userLoc.long},
-    zoom: 12
-		
+    zoom: 15
+
   });
 	console.log("searchMap ran");
 }

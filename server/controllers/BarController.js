@@ -40,6 +40,7 @@ router.post('/search', function(request, response){
 		bar.save();
 	})
 	.catch()
+	
 })
 
 //GET request to /bar/assignment

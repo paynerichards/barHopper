@@ -48,7 +48,7 @@ $('#searchSubmit').click(function(){
 	$.ajax({
 		method: 'POST',
 		url: 'http://localhost:3000/bar/search',
-		data: loc
+		data: loc,
 		success: function(response){
 			window.location = "http://localhost:3000/bar/assignment"
 		}

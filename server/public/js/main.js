@@ -43,6 +43,7 @@ navigator.geolocation.getCurrentPosition(function(position) {
 	loc.userLong = position.coords.longitude
 	console.log(loc)
 	initMap()
+	initBarMap()
 })
 
 $('#searchSubmit').click(function(){
@@ -64,26 +65,31 @@ $('#searchSubmit').click(function(){
 
 //map on search page
 function initMap() {
-
-  map = new google.maps.Map(document.getElementById('searchMap'), {
+	var browserLoc = {lat: loc.userLat, lng: loc.userLong};
+  var map = new google.maps.Map(document.getElementById('searchMap'), {
     center: {lat: loc.userLat, lng: loc.userLong},
-    zoom: 15
-
+    zoom: 12
   });
-	console.log("searchMap ran");
+	var marker = new google.maps.Marker({
+		position: browserLoc,
+		map: map
+	});
 }
 
 var barLoc = {
 	lat: 0.00000000,
 	long: 0.00000000,
 	address:"",
+
 };
 
-// function initAssignmentMap() {
-//   map = new google.maps.Map(document.getElementById('assignmentMap'), {
-//     center: {lat: userLoc.lat, lng: userLoc.long},
-//     zoom: 8
-//   });
-// 	console.log("searchMap ran");
-// 	$('#assignemntMap').attr('script','https://maps.googleapis.com/maps/api/js?key=AIzaSyCD8M1keM0LUP3E-9o77NxoXg1AlzBQ1uw=initSearchMap');
-// }
+//map on assignment page
+function initBarMap() {
+  var map = new google.maps.Map(document.getElementById('assignmentMap'), {
+    center: {lat: barLoc.lat, lng: barLoc.long},
+    zoom: 12
+  });
+	var marker = new google.maps.Marker({
+		position: barLoc,
+		map: map
+	});

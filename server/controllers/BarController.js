@@ -53,12 +53,14 @@ router.post('/search', function(request, response){
 //GET request to /bar/assignment/:id
 router.get('/assignment/:id', function(request, response){
 	var id = request.params.id;
-	Bar.findById(id, function(error, bar){	
+	Bar.findById(id, function(error, bar){
+		console.log(id);
+		console.log(bar);
 		response.render('assignment', bar)
 	})
 })
 
-module.exports= router;
+module.exports = router;
 
 
 

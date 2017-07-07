@@ -33,14 +33,15 @@ $('#loginSubmit').click(function(){
 })
 
 var loc = {
-	userLat: 0.00000000,
-	userLong: 0.00000000,
+	userLat: 0,
+	userLong: 0,
 	radius: ($('#searchRadius option:selected').val() * 1609)
 };
 
 navigator.geolocation.getCurrentPosition(function(position) {
-	loc.lat = position.coords.latitude;
-	loc.long = position.coords.longitude
+	loc.userLat = position.coords.latitude;
+	loc.userLong = position.coords.longitude
+	console.log(loc)
 })
 
 $('#searchSubmit').click(function(){
@@ -48,9 +49,9 @@ $('#searchSubmit').click(function(){
 		method: 'POST',
 		url: 'http://localhost:3000/bar/search',
 		data: loc
-		// success: function(response){
-		// 	window.location = "http://localhost:3000/bar/assignment"
-		// }
+		success: function(response){
+			window.location = "http://localhost:3000/bar/assignment"
+		}
 	})
 })
 
@@ -61,9 +62,10 @@ $('#searchSubmit').click(function(){
 
 //map on search page
 function initMap() {
+
   map = new google.maps.Map(document.getElementById('searchMap'), {
-    center: {lat: userLoc.lat, lng: userLoc.long},
-    zoom: 15
+    center: {lat: loc.userLat, lng: loc.userLong},
+    zoom: 1
 
   });
 	console.log("searchMap ran");

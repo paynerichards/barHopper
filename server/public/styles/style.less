@@ -59,6 +59,7 @@ button:hover {
 .display {
   display: flex;
   flex: 0 1 auto;
+  flex-direction: column;
   justify-content: center;
   align-self: center;
   min-width: 600px;
@@ -105,36 +106,53 @@ input {
 //...........................SEARCH & ASSIGN
 
 .map {
-  display: flex;
-  flex: 0 1 auto;
-  justify-content: center;
-  align-self: center;
-  min-width: 600px;
-  height: 400px;
-}
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
+    align-self: center;
+    min-width: 600px;
+    height: 400px;
+  }
 
 //...........................SEARCH
 .search {
-
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
 }
 
 .searchTag {
-  color: white;
-  width: 150px;
-  margin: 0 0 0 175px;
 }
 
 #searchRadius {
-  width: 50px;
 }
 
 //...........................ASSIGNMENT
 
-.assignment {
+.barInfo {
   display:flex;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
-  align-content: stretch;
+  align-items: center;
+}
+
+#photo {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-self: center;
+  max-width: 600px;
+  max-height: 400px;
+}
+
+#checkIn {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
   align-items: center;
 }

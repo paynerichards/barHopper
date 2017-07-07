@@ -36,7 +36,8 @@ router.post('/search', function(request, response){
 				type: "Point",
 				coordinates: [randBar.coordinates.longitude, randBar.coordinates.latitude]
 			},
-			imageUrl: randBar.image_url
+			imageUrl: randBar.image_url,
+			address: randBar.location.display_address
 		})
 		bar.save();
 		response.send(bar)
@@ -50,7 +51,7 @@ router.post('/search', function(request, response){
 
 //GET request to /bar/assignment
 router.get('/assignment', function(request, response){
-		response.render('assignment', bar)
+		response.render('assignment')
 })
 
 module.exports= router;

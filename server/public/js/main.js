@@ -53,10 +53,15 @@ $('#searchSubmit').click(function(){
 		data: loc,
 		success: function(response){
 			console.log(response)
-			// window.location = "http://localhost:3000/bar/assignment"
+			barLoc.lat = response.location.coordinates[1];
+			barLoc.long = response.location.coordinates[0];
+			barLoc.address = response.address;
+			window.location = "http://localhost:3000/bar/assignment"
 		}
 	})
 })
+
+//add map to search and assignment pages
 
 //map on search page
 function initMap() {
@@ -72,8 +77,10 @@ function initMap() {
 }
 
 var barLoc = {
-	lat: 0,
-	long: 0
+	lat: 0.00000000,
+	long: 0.00000000,
+	address:"",
+
 };
 
 //map on assignment page

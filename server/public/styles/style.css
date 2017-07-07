@@ -15,47 +15,10 @@ body {
   min-width: 600px;
   margin: 100px 0 0 0;
 }
-.largeLogo {
-  align-self: center;
-}
-.display,
-.map {
-  display: flex;
-  flex: 0 1 auto;
-  justify-content: center;
-  align-self: center;
-  min-width: 600px;
-  height: 400%;
-}
 .footer {
   flex: 0 1 auto;
   align-self: center;
   min-width: 600px;
-}
-.assignment,
-.search {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: center;
-}
-.searchTag {
-  color: white;
-  width: 150px;
-  margin: 0 0 0 175px;
-}
-#searchRadius {
-  width: 50px;
-}
-button {
-  width: 200px;
-  height: 30px;
-  justify-content: center;
-  align-self: center;
-  margin: 0;
-  padding: 0;
 }
 button {
   background: #ea1a1a;
@@ -67,11 +30,26 @@ button {
   text-decoration: none;
   justify-content: center;
   height: 40px;
+  width: 200px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
 }
 button:hover {
   background: #ea1a1a;
   text-decoration: none;
   color: #323232;
+}
+.largeLogo {
+  align-self: center;
+}
+.display {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-self: center;
+  min-width: 600px;
+  height: 400px;
 }
 .logIn,
 .register {
@@ -80,15 +58,6 @@ button:hover {
   justify-content: center;
   align-self: center;
   min-width: 600px;
-}
-#registerLink {
-  font-family: sans;
-  color: #ea1a1a;
-  text-decoration: none;
-  text-transform: lowercase;
-}
-#registerLink:hover {
-  color: white;
 }
 ul {
   list-style-type: none;
@@ -101,9 +70,36 @@ input {
   margin: 0;
   padding: 0;
 }
-#searchMap {
-  width: 600px;
+#registerLink {
+  font-family: sans;
+  color: #ea1a1a;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+#registerLink:hover {
+  color: white;
+}
+.map {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-self: center;
+  min-width: 600px;
   height: 400px;
-  margin: 0;
-  padding: 0;
+}
+.searchTag {
+  color: white;
+  width: 150px;
+  margin: 0 0 0 175px;
+}
+#searchRadius {
+  width: 50px;
+}
+.assignment {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
 }

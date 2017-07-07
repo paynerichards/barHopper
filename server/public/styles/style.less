@@ -1,3 +1,5 @@
+//...........................STUFF ON ALL PAGES
+
 @lightColor: rgb(234,26,26);
 @darkColor: rgb(50,50,50);
 
@@ -21,51 +23,10 @@ body {
   margin: 100px 0 0 0;
 }
 
-.largeLogo {
-  align-self: center;
-}
-
-.display, .map {
-  display: flex;
-  flex: 0 1 auto;
-  justify-content: center;
-  align-self: center;
-  min-width: 600px;
-  height: 400%;
-}
-
 .footer {
   flex: 0 1 auto;
   align-self: center;
   min-width: 600px;
-}
-
-.assignment, .search {
-  display:flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-content: stretch;
-  align-items: center;
-}
-
-.searchTag {
-  color: white;
-  width: 150px;
-  margin: 0 0 0 175px;
-}
-
-#searchRadius {
-  width: 50px;
-}
-
-button {
-  width: 200px;
-  height: 30px;
-  justify-content: center;
-  align-self: center;
-  margin: 0;
-  padding: 0;
 }
 
 button {
@@ -78,6 +39,10 @@ button {
   text-decoration: none;
   justify-content: center;
   height: 40px;
+  width: 200px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
 }
 
 button:hover {
@@ -86,23 +51,26 @@ button:hover {
   color: @darkColor;
 }
 
+//...........................LOGIN & REGISTER
+.largeLogo {
+  align-self: center;
+}
+
+.display {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-self: center;
+  min-width: 600px;
+  height: 400px;
+}
+
 .logIn, .register {
   display: flex;
   flex: 0 1 auto;
   justify-content: center;
   align-self: center;
   min-width: 600px;
-}
-
-#registerLink {
-  font-family: sans;
-  color: @lightColor;
-  text-decoration: none;
-  text-transform: lowercase;
-}
-
-#registerLink:hover {
-  color: white;
 }
 
 ul {
@@ -118,9 +86,55 @@ input {
   padding: 0;
 }
 
-#searchMap {
-  width: 600px;
+//...........................LOGIN
+
+#registerLink {
+  font-family: sans;
+  color: @lightColor;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+#registerLink:hover {
+  color: white;
+}
+
+//...........................REGISTER
+
+
+//...........................SEARCH & ASSIGN
+
+.map {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-self: center;
+  min-width: 600px;
   height: 400px;
-  margin: 0;
-  padding: 0;
+}
+
+//...........................SEARCH
+.search {
+
+}
+
+.searchTag {
+  color: white;
+  width: 150px;
+  margin: 0 0 0 175px;
+}
+
+#searchRadius {
+  width: 50px;
+}
+
+//...........................ASSIGNMENT
+
+.assignment {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-content: stretch;
+  align-items: center;
 }

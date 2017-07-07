@@ -86,3 +86,4 @@ function initBarMap() {
 		position: barLoc,
 		map: map
 	});
+}

@@ -22,7 +22,7 @@ app.use('/user', UserController);
 app.use('/bar', BarController);
 
 
-//GET request to / 
+//GET request to /
 app.get('/', function(request, response){
 	response.render('login')
 });

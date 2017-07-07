@@ -33,8 +33,8 @@ $('#loginSubmit').click(function(){
 })
 
 var userLoc = {
-	lat: 0.00000000,
-	long: 0.00000000
+	lat: 41.8907696,
+	long: -87.6267926
 };
 
 navigator.geolocation.getCurrentPosition(function(position) {
@@ -49,3 +49,32 @@ $('#searchSubmit').click(function(){
 		data: userLoc
 	})
 })
+
+//add map to search and assignment pages
+//var googleAPI = AIzaSyDbLMFY9LdQ2oJpTurRecyrqU4GiPmZ3bY;
+
+
+
+//map on search page
+function initMap() {
+  map = new google.maps.Map(document.getElementById('searchMap'), {
+    center: {lat: userLoc.lat, lng: userLoc.long},
+    zoom: 12
+		
+  });
+	console.log("searchMap ran");
+}
+
+// var barLoc = {
+// 	lat: 0.00000000,
+// 	long: 0.00000000
+// };
+
+// function initAssignmentMap() {
+//   map = new google.maps.Map(document.getElementById('assignmentMap'), {
+//     center: {lat: userLoc.lat, lng: userLoc.long},
+//     zoom: 8
+//   });
+// 	console.log("searchMap ran");
+// 	$('#assignemntMap').attr('script','https://maps.googleapis.com/maps/api/js?key=AIzaSyCD8M1keM0LUP3E-9o77NxoXg1AlzBQ1uw=initSearchMap');
+// }

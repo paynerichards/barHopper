@@ -1,4 +1,4 @@
-@lightColor: rgb(245,255,0);
+@lightColor: rgb(234,26,26);
 @darkColor: rgb(50,50,50);
 
 
@@ -32,17 +32,13 @@ body {
   justify-content: center;
   align-self: center;
   min-width: 600px;
-  height: 600px;
+  height: 50%;
 }
 
 .footer {
   flex: 0 1 auto;
   align-self: center;
   min-width: 600px;
-}
-
-.username {
-  margin: 0 0 0 100px;
 }
 
 .searchTag {
@@ -56,10 +52,61 @@ body {
   width: 50px;
 }
 
-.button {
-  width: 50px;
+button {
+  width: 200px;
+  height: 30px;
+  justify-content: center;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: @lightColor;
+  text-shadow: 2px 2px 3px @darkColor;
+  box-shadow: 0px 1px 3px @darkColor;
+  font-family: sans;
+  color: #ffffff;
+  font-size: 30px;
+  text-decoration: none;
+  justify-content: center;
+  height: 40px;
+}
+
+button:hover {
+  background: @lightColor;
+  text-decoration: none;
+  color: @darkColor;
+}
+
+.logIn, .register {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-self: center;
+  min-width: 600px;
+}
+
+#registerLink {
+  font-family: sans;
+  color: @lightColor;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+
+#registerLink:hover {
+  color: white;
 }
 
 ul {
   list-style-type: none;
+  color: @lightColor;
+}
+
+input {
+  justify-content: center;
+  width: 200px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
 }

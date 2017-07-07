@@ -26,15 +26,12 @@ body {
   justify-content: center;
   align-self: center;
   min-width: 600px;
-  height: 600px;
+  height: 50%;
 }
 .footer {
   flex: 0 1 auto;
   align-self: center;
   min-width: 600px;
-}
-.username {
-  margin: 0 0 0 100px;
 }
 .searchTag {
   float: left;
@@ -45,9 +42,55 @@ body {
 .searchRadius {
   width: 50px;
 }
-.button {
-  width: 50px;
+button {
+  width: 200px;
+  height: 30px;
+  justify-content: center;
+  align-self: center;
+  margin: 0;
+  padding: 0;
+}
+button {
+  background: #ea1a1a;
+  text-shadow: 2px 2px 3px #323232;
+  box-shadow: 0px 1px 3px #323232;
+  font-family: sans;
+  color: #ffffff;
+  font-size: 30px;
+  text-decoration: none;
+  justify-content: center;
+  height: 40px;
+}
+button:hover {
+  background: #ea1a1a;
+  text-decoration: none;
+  color: #323232;
+}
+.logIn,
+.register {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-self: center;
+  min-width: 600px;
+}
+#registerLink {
+  font-family: sans;
+  color: #ea1a1a;
+  text-decoration: none;
+  text-transform: lowercase;
+}
+#registerLink:hover {
+  color: white;
 }
 ul {
   list-style-type: none;
+  color: #ea1a1a;
+}
+input {
+  justify-content: center;
+  width: 200px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
 }

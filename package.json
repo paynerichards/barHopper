@@ -17,6 +17,7 @@
     "express": "^4.15.3",
     "express-session": "^1.15.3",
     "express-sessions": "^1.0.6",
+    "geolocation-marker": "^2.0.4",
     "gulp": "^3.9.1",
     "gulp-less": "^3.3.2",
     "gulp-watch": "^4.3.11",

@@ -66,13 +66,16 @@ $('#searchSubmit').click(function(){
 //map on search page
 function initMap() {
 	var browserLoc = {lat: loc.userLat, lng: loc.userLong};
+	var im = "/img/blue-dot.png";
   var map = new google.maps.Map(document.getElementById('searchMap'), {
     center: {lat: loc.userLat, lng: loc.userLong},
     zoom: 12
   });
 	var marker = new google.maps.Marker({
 		position: browserLoc,
-		map: map
+		map: map,
+		animation: google.maps.Animation.DROP,
+		icon: im
 	});
 }
 

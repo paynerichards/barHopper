@@ -41,12 +41,13 @@ router.post('/search', function(request, response){
 			phone: randBar.display_phone
 		})
 		bar.save();
-		response.send(bar)
-		
+		response.send(bar);
+		console.log(bar.address);
+
 
 	})
-	
-	
+
+
 
 })
 
@@ -61,18 +62,3 @@ router.get('/assignment/:id', function(request, response){
 })
 
 module.exports = router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

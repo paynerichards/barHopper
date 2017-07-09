@@ -14,5 +14,10 @@
   <div class = "searchButton">
     <button class = "button" id = "searchSubmit">Search</button>
   </div>
+  <div class = "logout">
+    {{#if loggedIn}}
+      <a id = "logoutLink" href='/user/logout'>Logout</a>
+    {{/if}}
+  </div>
 </div>
 </div>

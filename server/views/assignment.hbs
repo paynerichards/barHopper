@@ -1,25 +1,28 @@
 <div class = "display">
   <div class = "map" id = "assignmentMap">
   </div>
-  <div class = "assignment">
-    <div class = "barInfo">
-      <div class = "barPic">
-        <img id = "photo" src = "{{imageUrl}}" />
+  <div class = "barInfo">
+    <div class = "barPic">
+      <img id = "photo" src = "{{imageUrl}}" />
+    </div>
+    <div class = "barDetails">
+      <div class = "barName">
+        <p>{{name}}</p>
       </div>
-      <div class = "barDetails">
-        <div class = "barName">
-          <p>{{name}}</p>
-        </div>
-        <div class = "barStreet">
-          <p>{{address}}</p>
-        </div>
-        <div class = "barPhone">
-          <p>{{phone}}<p>
-        </div>
+      <div class = "barStreet">
+        <p>{{address}}</p>
+      </div>
+      <div class = "barPhone">
+        <p>{{phone}}<p>
       </div>
     </div>
-    <div id = "checkIn">
-      <button class = "button">Check In</button>
-    </div>
+  </div>
+  <div id = "checkIn">
+    <button class = "button">Check In</button>
+  </div>
+  <div class = "logout">
+    {{#if loggedIn}}
+      <a id = "logoutLink" href='/user/logout'>Logout</a>
+    {{/if}}
   </div>
 </div>

@@ -42,7 +42,6 @@ navigator.geolocation.getCurrentPosition(function(position) {
 	loc.userLat = position.coords.latitude;
 	loc.userLong = position.coords.longitude;
 	initMap();
-	initBarMap();
 })
 
 $('#searchSubmit').click(function(){
@@ -51,9 +50,8 @@ $('#searchSubmit').click(function(){
 		url: 'http://localhost:3000/bar/search',
 		data: loc,
 		success: function(response){
-			console.log(response)
-			barLoc.lat = response.location.coordinates[1];
-			barLoc.long = response.location.coordinates[0];
+			barLoc.lat = response.location.coordinates[0];
+			barLoc.long = response.location.coordinates[1];
 			barLoc.address = response.address;
 			window.location = "http://localhost:3000/bar/assignment/" + response._id
 		}
@@ -65,7 +63,7 @@ $('#searchSubmit').click(function(){
 //map on search page
 function initMap() {
 	var browserLoc = {lat: loc.userLat, lng: loc.userLong};
-	var im = "/img/blue-dot.png";
+	var userMarker = "/img/blue-dot.png";
   var map = new google.maps.Map(document.getElementById('searchMap'), {
     center: {lat: loc.userLat, lng: loc.userLong},
     zoom: 15
@@ -74,7 +72,7 @@ function initMap() {
 		position: browserLoc,
 		map: map,
 		animation: google.maps.Animation.DROP,
-		icon: im
+		icon: userMarker
 	});
 }
 
@@ -94,4 +92,6 @@ function initBarMap() {
 		position: barLoc,
 		map: map
 	});
+	console.log("initBarMap fired");
+
 }

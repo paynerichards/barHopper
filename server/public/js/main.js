@@ -58,6 +58,18 @@ $('#searchSubmit').click(function(){
 	})
 })
 
+var roundLoc = function(point){
+	(Math.round(point*10000))/10000
+}
+
+$('#checkInBut').click(function(){
+	if(roundLoc(loc.userLat) === roundLoc(barLoc.lat) && roundLoc(loc.userLong) === roundLoc(barLoc.long)){
+		window.location = "http://localhost:3000/bar/search"
+	}else{
+		alert('Visit the bar!')
+	}
+})
+
 //add map to search and assignment pages
 
 //map on search page

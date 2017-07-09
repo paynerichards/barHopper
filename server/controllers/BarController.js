@@ -29,21 +29,26 @@ router.post('/search', function(request, response){
 	.then(function(res){
 		var randBar = res.data.businesses[random()];
 		console.log(randBar);
-		var bar = new Bar({
-			name: randBar.name,
-			yelpId: randBar.id,
-			location: {
-				type: "Point",
-				coordinates: [randBar.coordinates.longitude, randBar.coordinates.latitude]
-			},
-			imageUrl: randBar.image_url,
-			address: randBar.location.display_address,
-			phone: randBar.display_phone
+		Bar.findOne({yelpId: randBar.id}, function(error, oldBar){
+			if(bar){
+				response.send(oldBar)
+			}else{
+				var bar = new Bar({
+					name: randBar.name,
+					yelpId: randBar.id,
+					location: {
+						type: "Point",
+						coordinates: [randBar.coordinates.longitude, randBar.coordinates.latitude]
+					},
+					imageUrl: randBar.image_url,
+					address: randBar.location.display_address,
+					phone: randBar.display_phone
+				})		
+				bar.save();
+				response.send(bar);
+				console.log(bar.address);
+			}
 		})
-		bar.save();
-		response.send(bar);
-		console.log(bar.address);
-
 
 	})
 

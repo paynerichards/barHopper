@@ -57,13 +57,15 @@ body {
   justify-content: center;
   align-content: stretch;
   align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  min-width: 600px;
 }
 
 .wordLogo {
   flex: 0 1 auto;
   align-self: center;
-  min-width: 600px;
-  margin: 100px 0 0 0;
+  margin: 200px 0;
 }
 
 .footer {
@@ -73,23 +75,23 @@ body {
 }
 
 button {
-  background: @orage;
+  background: @orange;
   text-shadow: 2px 2px 3px @gray;
   box-shadow: 0px 1px 3px @gray;
   font-family: sans;
   color: #ffffff;
-  font-size: 30px;
+  font-size: 45px;
   text-decoration: none;
   justify-content: center;
   height: 40px;
-  width: 200px;
-  height: 30px;
+  width: 600px;
+  height: 60px;
   margin: 0;
   padding: 0;
 }
 
 button:hover {
-  background: @orage;
+  background: @orange;
   text-decoration: none;
   color: @gray;
 }
@@ -97,6 +99,8 @@ button:hover {
 //...........................LOGIN & REGISTER
 .largeLogo {
   align-self: center;
+  min-width: 600px;
+  max-width: 1000px;
 }
 
 .display {
@@ -115,26 +119,49 @@ button:hover {
   justify-content: center;
   align-self: center;
   min-width: 600px;
+  margin: 100px 0 0 0;
 }
 
 ul {
   list-style-type: none;
-  color: @orage;
+  color: @orange;
 }
 
 input {
   justify-content: center;
-  width: 200px;
-  height: 30px;
+  width: 600px;
+  height: 60px;
   margin: 0;
   padding: 0;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: sans;
+  color: @gray;
+  font-size: 24pt;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-family: sans;
+  color: @gray;
+  font-size: 24pt;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-family: sans;
+  color: @gray;
+  font-size: 24pt;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-family: sans;
+  color: @gray;
+  font-size: 24pt;
 }
 
 //...........................LOGIN
 
 #registerLink {
   font-family: sans;
-  color: @orage;
+  font-size: 30pt;
+  color: @orange;
   text-decoration: none;
   text-transform: lowercase;
 }
@@ -153,8 +180,12 @@ input {
     flex: 0 1 auto;
     justify-content: center;
     align-self: center;
-    width: 600px;
-    height: 600px;
+    width: 100%;
+    height: 100%;
+    max-width: 850px;
+    min-width: 600px;
+    max-height: 850px;
+    min-height: 600px;
     border: 1px solid white;
   }
 
@@ -166,12 +197,19 @@ input {
   justify-content: center;
   align-content: center;
   align-items: center;
+  height: 60px;
+  margin: 95px auto;
 }
 
 .searchTag {
+  font-family: sans;
+  font-size: 30pt;
+  color: @orange;
 }
 
 #searchRadius {
+  font-size: 30pt;
+  float: right;
 }
 
 //...........................ASSIGNMENT

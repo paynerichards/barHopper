@@ -244,6 +244,7 @@ input {
   min-width: 600px;
   max-height: 850px;
   min-height: 600px;
+  margin: 0 0 200px 0;
   border: 1px solid white;
 }
 .search {
@@ -254,16 +255,18 @@ input {
   align-content: center;
   align-items: center;
   height: 60px;
-  margin: 95px auto;
-}
-.searchTag {
-  font-family: sans;
-  font-size: 30pt;
-  color: #ea1a1a;
+  margin: 0;
 }
 #searchRadius {
-  font-size: 30pt;
-  float: right;
+  font-size: 24pt;
+  padding: 0;
+  margin: 0 0 100px 0;
+  border: 1px solid #ccc;
+  width: 300px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: #fff;
+  background: #fff;
 }
 .barInfo {
   display: flex;

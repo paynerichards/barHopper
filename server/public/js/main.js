@@ -40,10 +40,9 @@ var loc = {
 
 navigator.geolocation.getCurrentPosition(function(position) {
 	loc.userLat = position.coords.latitude;
-	loc.userLong = position.coords.longitude
-	console.log(loc)
-	initMap()
-	initBarMap()
+	loc.userLong = position.coords.longitude;
+	initMap();
+	initBarMap();
 })
 
 $('#searchSubmit').click(function(){
@@ -69,7 +68,7 @@ function initMap() {
 	var im = "/img/blue-dot.png";
   var map = new google.maps.Map(document.getElementById('searchMap'), {
     center: {lat: loc.userLat, lng: loc.userLong},
-    zoom: 12
+    zoom: 15
   });
 	var marker = new google.maps.Marker({
 		position: browserLoc,
@@ -83,14 +82,13 @@ var barLoc = {
 	lat: 0.00000000,
 	long: 0.00000000,
 	address:"",
-
 };
 
 //map on assignment page
 function initBarMap() {
   var map = new google.maps.Map(document.getElementById('assignmentMap'), {
     center: {lat: barLoc.lat, lng: barLoc.long},
-    zoom: 12
+    zoom: 15
   });
 	var marker = new google.maps.Marker({
 		position: barLoc,

@@ -30,9 +30,22 @@ body {
   height: 300px;
 }
 
+#copy {
+  font-family: sans;
+  font-size: 16pt;
+  color: white;
+  text-decoration: none;
+  text-align: right;
+  vertical-align: bottom;
+  margin: 200px 20px 0 0;
+}
+
 .logout {
-  justify-content: center;
-  margin: 50px 0 0 0;
+  font-family: sans;
+  font-size: 30pt;
+  color: @orange;
+  text-decoration: none;
+  text-transform: lowercase;
 }
 
 #logoutLink {
@@ -91,6 +104,8 @@ button:hover {
 ul {
   list-style-type: none;
   color: @orange;
+  margin: 0;
+  padding: 0;
 }
 
 input {
@@ -124,6 +139,16 @@ input {
 
 //...........................LOGIN
 
+.regLink {
+  display: flex;
+  flex: 0 1 auto;
+  justify-content: center;
+  align-self: center;
+  min-width: 600px;
+  margin: 50px 0 0 0;
+  padding: 0;
+}
+
 #registerLink, {
   font-family: sans;
   font-size: 30pt;
@@ -155,6 +180,28 @@ input {
     border: 1px solid white;
   }
 
+  .logout {
+    display: flex;
+    flex: 0 1 auto;
+    justify-content: center;
+    align-self: center;
+    min-width: 600px;
+    margin: 50px 0 0 0;
+    padding: 0;
+  }
+
+  #logoutLink, {
+    font-family: sans;
+    font-size: 24pt;
+    color: white;
+    text-decoration: none;
+    text-transform: lowercase;
+  }
+
+  #logoutLink:hover {
+    color: @orange;
+  }
+
 //...........................SEARCH
 .search {
   display: flex;
@@ -163,14 +210,13 @@ input {
   justify-content: center;
   align-content: center;
   align-items: center;
-  height: 60px;
   margin: 0
 }
 
 #searchRadius {
   font-size: 24pt;
   padding: 0;
-  margin: 450px 0 100px 0;
+  margin: 75px 0;
   border: 1px solid #ccc;
   width: 300px;
   border-radius: 3px;

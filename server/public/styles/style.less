@@ -4,6 +4,10 @@
 @gray: rgb(50,50,50);
 
 body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100%;
+  height: 100%;
   background-color: @gray;
 }
 
@@ -25,9 +29,11 @@ body {
 }
 
 .footer {
+  position: absolute;
+  bottom: 0px;
   width: 100%;
   min-width: 600px;
-  height: 300px;
+  height: 200px;
 }
 
 #copy {
@@ -36,8 +42,7 @@ body {
   color: white;
   text-decoration: none;
   text-align: right;
-  vertical-align: bottom;
-  margin: 200px 20px 0 0;
+  margin: 100px 20px 0 0;
 }
 
 .logout {

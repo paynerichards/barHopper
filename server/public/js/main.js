@@ -44,6 +44,12 @@ navigator.geolocation.getCurrentPosition(function(position) {
 	initMap();
 })
 
+navigator.geolocation.getCurrentPosition(function(position) {
+	loc.userLat = position.coords.latitude;
+	loc.userLong = position.coords.longitude;
+	initBarMap();
+})
+
 $('#searchSubmit').click(function(){
 	$.ajax({
 		method: 'POST',
@@ -72,7 +78,7 @@ $('#checkInBut').click(function(){
 
 //add map to search and assignment pages
 
-//map on search page
+//map on search page with user's location
 function initMap() {
 	var browserLoc = {lat: loc.userLat, lng: loc.userLong};
 	var userMarker = "/img/blue-dot.png";
@@ -94,7 +100,7 @@ var barLoc = {
 	address:"",
 };
 
-//map on assignment page
+//map on assignment page with bar location
 function initBarMap() {
   var map = new google.maps.Map(document.getElementById('assignmentMap'), {
     center: {lat: barLoc.lat, lng: barLoc.long},
@@ -104,6 +110,5 @@ function initBarMap() {
 		position: barLoc,
 		map: map
 	});
-	console.log("initBarMap fired");
-
+	console.log(barLoc);
 }

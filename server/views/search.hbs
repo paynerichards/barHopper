@@ -4,8 +4,8 @@
   </div>
   <div class = "search">
     <select id = "searchRadius">
-      <option value="0" selected>Search Area (miles)</option>
-      <option value="1">1</option>
+      <option value="0">Search Area (miles)</option>
+      <option value="1" selected>1</option>
       <option value="5">5</option>
       <option value="10">10</option>
     </select>
@@ -14,8 +14,6 @@
     <button class = "button" id = "searchSubmit">Search</button>
   </div>
   <div class = "logout">
-    {{#if loggedIn}}
       <a id = "logoutLink" href='/user/logout'>Logout</a>
-    {{/if}}
   </div>
 </div>

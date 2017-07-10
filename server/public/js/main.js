@@ -9,10 +9,10 @@ $('#registerSubmit').click(function(){
 
 	$.ajax({
 		method: 'POST',
-		url: 'http://localhost:3000/user/register',
+		url: '../user/register',
 		data: newUser,
 		success: function(response){
-			window.location = "http://localhost:3000/bar/search";
+			window.location = "../bar/search";
 		}
 	})
 });
@@ -24,10 +24,10 @@ $('#loginSubmit').click(function(){
 	}
 	$.ajax({
 		method: 'POST',
-		url: 'http://localhost:3000/user/login',
+		url: '../user/login',
 		data: userInfo,
 		success: function(response){
-			window.location = "http://localhost:3000/bar/search"
+			window.location = "../bar/search"
 		}
 	})
 })
@@ -53,13 +53,13 @@ navigator.geolocation.getCurrentPosition(function(position) {
 $('#searchSubmit').click(function(){
 	$.ajax({
 		method: 'POST',
-		url: 'http://localhost:3000/bar/search',
+		url: '../bar/search',
 		data: loc,
 		success: function(response){
 			barLoc.lat = response.location.latitude;
 			barLoc.long = response.location.longitude;
 			barLoc.address = response.address;
-			window.location = "http://localhost:3000/bar/assignment/" + response._id
+			window.location = "../bar/assignment/" + response._id
 		}
 	})
 })
@@ -70,7 +70,7 @@ var roundLoc = function(point){
 
 $('#checkInBut').click(function(){
 	if(roundLoc(loc.userLat) === roundLoc(barLoc.lat) && roundLoc(loc.userLong) === roundLoc(barLoc.long)){
-		window.location = "http://localhost:3000/bar/search"
+		window.location = "../bar/search"
 	}else{
 		alert('Visit the bar!')
 	}

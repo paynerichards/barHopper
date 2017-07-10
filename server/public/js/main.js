@@ -77,11 +77,11 @@ $('#checkInBut').click(function(){
 })
 
 //add map to search and assignment pages
+var userMarker = "/img/blue-dot.png";
 
 //map on search page with user's location
 function initMap() {
 	var browserLoc = {lat: loc.userLat, lng: loc.userLong};
-	var userMarker = "/img/blue-dot.png";
   var map = new google.maps.Map(document.getElementById('searchMap'), {
     center: {lat: loc.userLat, lng: loc.userLong},
     zoom: 15
@@ -105,9 +105,7 @@ function initBarMap() {
     center: {lat: barLoc.lat, lng: barLoc.long},
     zoom: 15
   });
-	var marker = new google.maps.Marker({
-		position: barLoc,
-		map: map
-	});
-	console.log(barLoc);
+	var marker = new google.maps.Marker();
+	marker.setPosition(new google.maps.LatLng(barLoc.lat, barLoc.long));
+	marker.setMap(map);
 }

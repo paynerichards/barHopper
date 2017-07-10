@@ -30,6 +30,7 @@ router.post('/search', function(request, response){
 		console.log(res.data.businesses)
 		var randBar = res.data.businesses[random()];
 		console.log(randBar);
+		console.log(typeof(randBar.coordinates.latitude))
 		Bar.findOne({yelpId: randBar.id}, function(error, oldBar){
 			if(bar){
 				response.send(oldBar)
@@ -38,8 +39,8 @@ router.post('/search', function(request, response){
 					name: randBar.name,
 					yelpId: randBar.id,
 					location: {
-						type: "Point",
-						coordinates: [randBar.coordinates.longitude, randBar.coordinates.latitude]
+						latitude: randBar.coordinates.latitude,
+						longitude: randBar.coordinates.longitude
 					},
 					imageUrl: randBar.image_url,
 					address: randBar.location.display_address,
@@ -47,7 +48,7 @@ router.post('/search', function(request, response){
 				})		
 				bar.save();
 				response.send(bar);
-				console.log(bar.address);
+				console.log(typeof(bar.location.latitude));
 			}
 		})
 

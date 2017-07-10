@@ -56,8 +56,8 @@ $('#searchSubmit').click(function(){
 		url: 'http://localhost:3000/bar/search',
 		data: loc,
 		success: function(response){
-			barLoc.lat = response.location.coordinates[0];
-			barLoc.long = response.location.coordinates[1];
+			barLoc.lat = response.location.latitude;
+			barLoc.long = response.location.longitude;
 			barLoc.address = response.address;
 			window.location = "http://localhost:3000/bar/assignment/" + response._id
 		}
@@ -65,7 +65,7 @@ $('#searchSubmit').click(function(){
 })
 
 var roundLoc = function(point){
-	(Math.round(point*10000))/10000
+	return (Math.round(point*10000))/10000
 }
 
 $('#checkInBut').click(function(){
@@ -95,9 +95,8 @@ function initMap() {
 }
 
 var barLoc = {
-	lat: 0.00000000,
-	long: 0.00000000,
-	address:"",
+	lat: Number($('#barLat').val()),
+	long: Number($('#barLong').val())
 };
 
 //map on assignment page with bar location

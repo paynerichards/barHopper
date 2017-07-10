@@ -4,8 +4,8 @@ var BarSchema = new mongoose.Schema({
 	name: String,
 	yelpId: String,
 	location: {
-		type: { type: String },
-		coordinates: [Number]
+		latitude: Number,
+		longitude: Number
 	},
 	imageUrl: String,
 	address: String,

@@ -25,6 +25,7 @@ body {
   bottom: 0px;
   width: 100%;
   min-width: 600px;
+  height: 15px;
 }
 #copy {
   font-family: sans;

@@ -8,8 +8,6 @@ var express = require('express'),
 
 require('dotenv').config()
 
-
-
 router.use(bodyParser.urlencoded({extended: true}));
 
 //GET request to /bar/search
@@ -45,17 +43,13 @@ router.post('/search', function(request, response){
 					imageUrl: randBar.image_url,
 					address: randBar.location.display_address,
 					phone: randBar.display_phone
-				})		
+				})
 				bar.save();
 				response.send(bar);
 				console.log(typeof(bar.location.latitude));
 			}
 		})
-
 	})
-
-
-
 })
 
 //GET request to /bar/assignment/:id

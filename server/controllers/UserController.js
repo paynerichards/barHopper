@@ -47,7 +47,6 @@ router.post('/register', function(request, response){
 		request.session.loggedIn = true;
 		response.json('success')
 	})
-
 })
 
 //GET request to user/logout
@@ -58,22 +57,3 @@ router.get('/logout', function(request, response){
 
 
 module.exports= router;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

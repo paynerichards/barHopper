@@ -1,28 +1,32 @@
 <div class = "display">
   <div class = "map" id = "assignmentMap">
   </div>
-  <div class = "barInfo">
-    <div class = "barPic">
-      <img id = "photo" src = "{{imageUrl}}" />
-    </div>
-    <div class = "barDetails">
-      <div class = "barName">
-        <p>{{name}}</p>
-      </div>
-      <div class = "barStreet">
-        <p>{{address}}</p>
-      </div>
-      <div class = "barPhone">
-        <p>{{phone}}<p>
-      </div>
-    </div>
+</div>
+<div class = "barInfo">
+  <div class = "barPic">
+    <img id = "photo" src = "{{imageUrl}}" />
   </div>
-  <div id = "checkIn">
-    <button id="checkInBut" class = "button">Check In</button>
-  </div>
-  <div class = "logout">
-    <a id = "logoutLink" href='/user/logout'>Logout</a>
+  <div class = "barDetails">
+    <div class = "barName">
+      <p>{{name}}</p>
+    </div>
+    <div class = "barStreet">
+      <p>{{address}}</p>
+    </div>
+    <div class = "barPhone">
+      <p>{{phone}}<p>
+    </div>
   </div>
 </div>
+<div id = "checkIn">
+  <button id="checkInBut" class = "button">Check In</button>
+</div>
+<div class = "logout">
+  <a href = "/user/logout" class = "logout">
+    <button id = "logoutLink">Logout</button>
+  </a>
+</div>
+<div>
 <input class='hidden' id='barLong' value='{{location.longitude}}'>
 <input class="hidden" id='barLat' value='{{location.latitude}}'>
+</div>

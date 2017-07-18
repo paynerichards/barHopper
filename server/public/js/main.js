@@ -77,7 +77,7 @@ $('#checkInBut').click(function(){
 		checkLoc.userLat = position.coords.latitude
 		checkLoc.userLong = position.coords.longitude
 		if(roundLoc(checkLoc.userLat) === roundLoc(barLoc.lat) && roundLoc(checkLoc.userLong) === roundLoc(barLoc.long)){
-			window.location = "../bar/search"
+			window.location = "../search"
 		}else{
 			alert('Visit the bar!')
 		}

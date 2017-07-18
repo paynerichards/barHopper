@@ -33,6 +33,6 @@ app.get('/', function(request, response){
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-server.listen(process.env.PORT, function(){{
+server.listen(process.env.PORT, function(){
 	console.log('listening on port 3000')
 })

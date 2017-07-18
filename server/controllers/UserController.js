@@ -15,7 +15,6 @@ router.get('/register', function(request, response){
 router.post('/login', function(request, response){
 	//check for existing user, log in
 	User.findOne({username: request.body.username}, function(error, user){
-		console.log(user)
 		if(user){
 			bcrypt.compare(request.body.password, user.password, function(error, match){
 				if(match === true){
@@ -42,7 +41,6 @@ router.post('/register', function(request, response){
 			dob: request.body.dob,
 			hometown: request.body.hometown
 		})
-		console.log(user)
 		user.save();
 		request.session.loggedIn = true;
 		response.json('success')

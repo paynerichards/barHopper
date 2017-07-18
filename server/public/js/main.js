@@ -82,9 +82,9 @@ var userMarker = "/img/blue-dot.png";
 //map on search page with user's location
 function initMap() {
 	var browserLoc = {lat: loc.userLat, lng: loc.userLong};
-  var map = new google.maps.Map(document.getElementById('searchMap'), {
-    center: {lat: loc.userLat, lng: loc.userLong},
-    zoom: 15
+	var map = new google.maps.Map(document.getElementById('searchMap'), {
+	    center: {lat: loc.userLat, lng: loc.userLong},
+	    zoom: 15
   });
 	var marker = new google.maps.Marker({
 		position: browserLoc,
@@ -101,9 +101,9 @@ var barLoc = {
 
 //map on assignment page with bar location
 function initBarMap() {
-  var map = new google.maps.Map(document.getElementById('assignmentMap'), {
-    center: {lat: barLoc.lat, lng: barLoc.long},
-    zoom: 15
+ 	var map = new google.maps.Map(document.getElementById('assignmentMap'), {
+	    center: {lat: barLoc.lat, lng: barLoc.long},
+	    zoom: 15
   });
 	var marker = new google.maps.Marker();
 	marker.setPosition(new google.maps.LatLng(barLoc.lat, barLoc.long));

@@ -69,7 +69,16 @@ var roundLoc = function(point){
 }
 
 $('#checkInBut').click(function(){
-	if(roundLoc(loc.userLat) === roundLoc(barLoc.lat) && roundLoc(loc.userLong) === roundLoc(barLoc.long)){
+	checkLoc ={
+		userLat: 0,
+		userLong: 0
+	}
+	navigator.geolocation.getCurrentPosition(function(position){
+		checkLoc.userLat = position.coords.latitude
+		checkLoc.userLong = position.coords.longitude
+	})
+	
+	if(roundLoc(checkLoc.userLat) === roundLoc(barLoc.lat) && roundLoc(checkLoc.userLong) === roundLoc(barLoc.long)){
 		window.location = "../bar/search"
 	}else{
 		alert('Visit the bar!')

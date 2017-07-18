@@ -76,13 +76,12 @@ $('#checkInBut').click(function(){
 	navigator.geolocation.getCurrentPosition(function(position){
 		checkLoc.userLat = position.coords.latitude
 		checkLoc.userLong = position.coords.longitude
+		if(roundLoc(checkLoc.userLat) === roundLoc(barLoc.lat) && roundLoc(checkLoc.userLong) === roundLoc(barLoc.long)){
+			window.location = "../bar/search"
+		}else{
+			alert('Visit the bar!')
+		}
 	})
-	
-	if(roundLoc(checkLoc.userLat) === roundLoc(barLoc.lat) && roundLoc(checkLoc.userLong) === roundLoc(barLoc.long)){
-		window.location = "../bar/search"
-	}else{
-		alert('Visit the bar!')
-	}
 })
 
 //add map to search and assignment pages

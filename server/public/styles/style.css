@@ -137,7 +137,6 @@ input {
   display: flex;
   width: 100%;
   margin-top: 25px;
-  margin-left: 20px;
 }
 .barPic {
   height: 250px;
@@ -147,6 +146,7 @@ input {
   width: 100%;
   height: auto;
   overflow: hidden;
+  margin-right: 10px;
 }
 .barDetails {
   height: 250px;

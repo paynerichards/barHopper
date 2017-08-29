@@ -93,18 +93,22 @@ input {
 ::-webkit-input-placeholder {
   font-family: sans;
   color: #323232;
+  font-size: 24pt;
 }
 ::-moz-placeholder {
   font-family: sans;
   color: #323232;
+  font-size: 24pt;
 }
 ::-ms-input-placeholder {
   font-family: sans;
   color: #323232;
+  font-size: 24pt;
 }
 :-moz-placeholder {
   font-family: sans;
   color: #323232;
+  font-size: 28pt;
 }
 .map {
   width: 650px;

@@ -137,6 +137,7 @@ input {
   display: flex;
   width: 100%;
   margin-top: 25px;
+  margin-left: 20px;
 }
 .barPic {
   height: 250px;
@@ -171,7 +172,7 @@ input {
 .logout {
   text-align: center;
   justify-content: center;
-  margin: 0 0 20px 0;
+  margin: 20px 0 20px 0;
   width: 100%;
 }
 .hidden {

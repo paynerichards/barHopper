@@ -44,13 +44,7 @@ body {
   margin-top: 150px;
   position: fixed;
   bottom: 0px;
-<<<<<<< HEAD
-  width: 100%;
-  min-width: 600px;
-  height: 15px;
-=======
   height: 30px;
->>>>>>> gw2
 }
 #copy {
   font-family: sans;
@@ -97,28 +91,20 @@ input {
   margin-bottom: 10px;
 }
 ::-webkit-input-placeholder {
-  /* Chrome/Opera/Safari */
   font-family: sans;
   color: #323232;
-  font-size: 24pt;
 }
 ::-moz-placeholder {
-  /* Firefox 19+ */
   font-family: sans;
   color: #323232;
-  font-size: 24pt;
 }
-:-ms-input-placeholder {
-  /* IE 10+ */
+::-ms-input-placeholder {
   font-family: sans;
   color: #323232;
-  font-size: 24pt;
 }
 :-moz-placeholder {
-  /* Firefox 18- */
   font-family: sans;
   color: #323232;
-  font-size: 28pt;
 }
 .map {
   width: 650px;

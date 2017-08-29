@@ -40,11 +40,9 @@ body {
   margin: 75px 0 0 0;
 }
 .footer {
+  height: 30px;
   width: 650px;
   margin-top: 150px;
-  position: fixed;
-  bottom: 0px;
-  height: 30px;
 }
 #copy {
   font-family: sans;
